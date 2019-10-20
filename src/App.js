@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import TodoContainer from "./components/TodoContainer";
 import Home from "./Pages/Home";
-import Contact from "./Pages/Contact";
-import About from "./Pages/About";
+import TodoPage from "./Pages/TodoPage";
+import Posts from "./Pages/Posts";
 
 class App extends React.Component {
   render() {
@@ -13,10 +12,10 @@ class App extends React.Component {
         <div className="app">
           <Navbar />
           <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/contact' component={Contact} />
+          <Route path='/posts' component={Posts} />
+          <Route path='/todos' component={TodoPage} />
 
-          <TodoContainer />
+
         </div>
       </BrowserRouter>
     );

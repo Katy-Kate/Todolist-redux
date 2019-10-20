@@ -1,10 +1,8 @@
 import React from "react";
-import Todo from "./src/components/Todo";
-import AddTodo from "./src/components/Form";
+import TodoList from "./TodoList";
+import AddTodo from "./Form";
 
 class TodoContainer extends React.Component {
-
-
   deleteTodo = id => {
     console.log(id);
     const todos = this.state.todos.filter(todo => {
@@ -23,12 +21,12 @@ class TodoContainer extends React.Component {
     return (
       <div className="todo-app container">
         <h1 className="center blue-text">Todo</h1>
-        <Todo todos={this.state.todos} deleteTodo={this.deleteTodo} />
-
+        <TodoList />
         <AddTodo addTodo={this.addTodo} />
       </div>
     );
   }
 }
+
 
 export default TodoContainer;
