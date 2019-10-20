@@ -1,11 +1,9 @@
 import React from "react";
-import Todo from "./Todo";
-import AddTodo from "./Form";
+import Todo from "./src/components/Todo";
+import AddTodo from "./src/components/Form";
 
 class TodoContainer extends React.Component {
-  state = {
-    todos: [{ id: 1, content: "buy milk" }, { id: 2, content: "buy tea" }]
-  };
+
 
   deleteTodo = id => {
     console.log(id);
